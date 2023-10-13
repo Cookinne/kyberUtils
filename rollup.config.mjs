@@ -1,5 +1,5 @@
 import dts from 'rollup-plugin-dts'
-import resolve from '@rollup/plugin-node-resolve'
+import resolve, { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
 import alias from '@rollup/plugin-alias'
@@ -25,9 +25,12 @@ const plugins = [
       ]
     ]
   }),
-  resolve({
-    preferBuiltins: true
-  }),
+  resolve(
+    {
+      preferBuiltins: true
+    }
+  ),
+  nodeResolve(),
   alias(),
   json(),
   typescript(),
