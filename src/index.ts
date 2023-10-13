@@ -5,7 +5,7 @@ import { swapConfig, ISwapPrice, BuildRoutePayload, Route, RawRouteSummary } fro
 export { ISwapPrice, BuildRoutePayload, Route, RawRouteSummary, swapConfig }
 
 export const getRouteSummary = async (chain: string, params: ISwapPrice) => {
-  // only support polygon and avalanche
+  // only support polygon and avalanche ??
   let _res: any;
   const url = `${swapConfig.KS_SWAP_ROUTE}${chain}/api/v1/routes?${queryString.stringify(params)}`;
   await axios

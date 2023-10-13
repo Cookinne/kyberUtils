@@ -13,7 +13,17 @@ const plugins = [
   babel({
     babelrc: false,
     babelHelpers: 'bundled',
-    presets: [['env', { modules: false }]]
+    presets: [
+      [
+        'env',
+        {
+          modules: false,
+          targets: {
+            node: 'current' // Compile based on current node version
+          }
+        }
+      ]
+    ]
   }),
   resolve({
     preferBuiltins: true
