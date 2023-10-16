@@ -4,6 +4,14 @@ export const swapConfig = {
   KS_SWAP_ROUTE_BUILD: 'https://aggregator-api.kyberswap.com/'
 }
 
+export const ChainIds = {
+  43114: 'avalanche',
+  137: 'polygon',
+  56: 'bsc',
+  1: 'ethereum',
+  10: 'optimism',
+}
+
 export type Route = {
   pool: string;
 
