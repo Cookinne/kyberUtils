@@ -26,13 +26,9 @@ export const postRouteBuild = async (chain: 1 | 10 | 43114 | 137 | 56, params: B
   const data = await axios({
     url,
     method: 'post',
-    params,
+    data: params,
     headers: { ['x-client-id']: 'dappos', 'Content-Type': 'application/json' },
   }
-    // { ...params },
-    // {
-    //   headers: { ['x-client-id']: 'dappos' },
-    // },
   );
   return data?.data;
 };
