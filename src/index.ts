@@ -27,7 +27,7 @@ export const postRouteBuild = async (chain: 1 | 10 | 43114 | 137 | 56, params: B
     url,
     method: 'post',
     data: params,
-    headers: { ['x-client-id']: 'dappos', 'Content-Type': 'application/json' },
+    // headers: { ['x-client-id']: 'dappos', 'Content-Type': 'application/json' },
   }
   );
   return data?.data;
